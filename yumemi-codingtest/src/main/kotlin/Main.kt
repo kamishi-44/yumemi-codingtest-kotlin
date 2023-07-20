@@ -15,18 +15,18 @@ fun main(args: Array<String>) {
     if (!checker.validArgs()) {
         // エラー処理
         println(checker.errorMessage())
+        return
     }
     // ファイルの変換、内容チェック
     try {
         val importer = FileImporter(args)
-        // インデックス直接指定はあまりしたくないが、ひとまず
         val EntryPlayers: List<EntryPlayer> = importer.fileToEntryPlayer()
         val PlayLogs: List<PlayLog> = importer.fileToPlayLog()
         return
     } catch (e: IOException) {
-
+        println(e.message)
     } catch (e: IllegalArgumentException) {
-
+        println(e.message)
     }
 }
 

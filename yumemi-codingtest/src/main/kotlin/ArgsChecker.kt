@@ -1,3 +1,4 @@
+import constant.ErrorCode
 import java.io.File
 
 /**
@@ -48,15 +49,5 @@ class ArgsChecker(
      */
     fun errorMessage(): String {
         return errorCode.message
-    }
-
-    /**
-     * 引数のチェック時に発生するエラーコードのEnumです。
-     */
-    enum class ErrorCode(val message: String) {
-        INVALID_ARGS_SIZE("入力引数の数が不正です。"),
-        NOT_FOUND("ログファイルが存在しません。"),
-        INVALID_HEADER("ログファイルのヘッダーが不正です。"),
-        VALID("")
     }
 }
