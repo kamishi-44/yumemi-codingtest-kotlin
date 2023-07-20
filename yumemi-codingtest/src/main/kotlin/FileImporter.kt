@@ -1,6 +1,8 @@
+import constant.ErrorCode
 import model.EntryPlayer
 import model.PlayLog
 import java.io.File
+import java.lang.IllegalArgumentException
 
 /**
  * 以下のファイルを取り込むクラスです。
@@ -34,12 +36,14 @@ class FileImporter(
 
     /**
      * エントリーファイルのCSVファイルを EntryPlayer の List に変換します。
+     *
+     * @throws[IllegalArgumentException] 読み込んだファイルのヘッダーが不正の場合
      */
     fun fileToEntryPlayer(): List<EntryPlayer> {
         val lines: List<String> = readFile(entryPlayerPath)
         val headers: List<String> = lines.first().split(",")
-        if (validHeader(headers, ENTRY_PLAYER_FIELDS)) {
-            // エラー処理
+        if (!validHeader(headers, ENTRY_PLAYER_FIELDS)) {
+            throw IllegalArgumentException(ErrorCode.INVALID_HEADER.message)
         }
         // ファイルからデータクラスに変換
         return listOf()
@@ -47,12 +51,14 @@ class FileImporter(
 
     /**
      * プレイログのCSVファイルを PlayLog の List に変換します。
+     *
+     * @throws[IllegalArgumentException] 読み込んだファイルのヘッダーが不正の場合
      */
     fun fileToPlayLog(): List<PlayLog> {
         val lines: List<String> = readFile(playLogPath)
         val headers: List<String> = lines.first().split(",")
-        if (validHeader(headers, PLAY_LOG_FIELDS)) {
-            // エラー処理
+        if (!validHeader(headers, PLAY_LOG_FIELDS)) {
+            throw IllegalArgumentException(ErrorCode.INVALID_HEADER.message)
         }
         // ファイルからデータクラスに変換
         return listOf()
