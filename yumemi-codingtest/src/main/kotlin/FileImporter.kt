@@ -2,7 +2,8 @@ import constant.ErrorCode
 import model.EntryPlayer
 import model.PlayLog
 import java.io.File
-import java.lang.IllegalArgumentException
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 /**
  * 以下のファイルを取り込むクラスです。
@@ -37,31 +38,52 @@ class FileImporter(
     /**
      * エントリーファイルのCSVファイルを EntryPlayer の List に変換します。
      *
+     * @return エントリープレイヤーのリスト
      * @throws[IllegalArgumentException] 読み込んだファイルのヘッダーが不正の場合
      */
     fun fileToEntryPlayer(): List<EntryPlayer> {
-        val lines: List<String> = readFile(entryPlayerPath)
-        val headers: List<String> = lines.first().split(",")
+        val lines: MutableList<String> = readFile(entryPlayerPath)
+        // 後続処理ではデータ部だけにしておきたいのでremoveする
+        val headers: List<String> = lines.removeAt(0).split(",")
         if (!validHeader(headers, ENTRY_PLAYER_FIELDS)) {
             throw IllegalArgumentException(ErrorCode.INVALID_HEADER.message)
         }
         // ファイルからデータクラスに変換
-        return listOf()
+        val entryPlayers: MutableList<EntryPlayer> = mutableListOf()
+        for (line: String in lines) {
+            val splitLine: List<String> = line.split(",")
+            val entryPlayer = EntryPlayer(playerId = splitLine[0], handleName = splitLine[1])
+            entryPlayers.add(entryPlayer)
+        }
+
+        return entryPlayers.toList()
     }
 
     /**
      * プレイログのCSVファイルを PlayLog の List に変換します。
      *
+     * @return プレイログのリスト
      * @throws[IllegalArgumentException] 読み込んだファイルのヘッダーが不正の場合
      */
     fun fileToPlayLog(): List<PlayLog> {
-        val lines: List<String> = readFile(playLogPath)
-        val headers: List<String> = lines.first().split(",")
+        val lines: MutableList<String> = readFile(playLogPath)
+        // 後続処理ではデータ部だけにしておきたいのでremoveする
+        val headers: List<String> = lines.removeAt(0).split(",")
         if (!validHeader(headers, PLAY_LOG_FIELDS)) {
             throw IllegalArgumentException(ErrorCode.INVALID_HEADER.message)
         }
         // ファイルからデータクラスに変換
-        return listOf()
+        val playLogs: MutableList<PlayLog> = mutableListOf()
+        for (line: String in lines) {
+            val splitLine: List<String> = line.split(",")
+            val playLog = PlayLog(
+                createTime = stringToLocalDateTime(splitLine[0]),
+                playerId = splitLine[1],
+                score = splitLine[2].toInt()
+            )
+            playLogs.add(playLog)
+        }
+        return playLogs.toList()
     }
 
     /**
@@ -69,12 +91,12 @@ class FileImporter(
      *
      * @param[filepath] 読み込むファイルのパス
      */
-    private fun readFile(filepath: String): List<String> {
+    private fun readFile(filepath: String): MutableList<String> {
         val file = File(filepath)
-        val lines: List<String> = file.readLines()
+        val lines: MutableList<String> = file.readLines().toMutableList()
 
         return lines.ifEmpty {
-            emptyList()
+            emptyList<String>().toMutableList()
         }
     }
 
@@ -92,5 +114,16 @@ class FileImporter(
             }
         }
         return true
+    }
+
+    /**
+     * String の日付時刻を LocalDateTime に変換します。
+     *
+     * @param[dateString] 日付時刻の文字列
+     * @return LocalDateTime に変換した dateString
+     */
+    private fun stringToLocalDateTime(dateString: String): LocalDateTime {
+        val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+        return LocalDateTime.parse(dateString, formatter)
     }
 }
