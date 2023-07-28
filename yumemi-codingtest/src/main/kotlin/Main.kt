@@ -1,6 +1,6 @@
+import constant.ErrorCode
 import model.EntryPlayer
 import model.PlayLog
-import java.io.IOException
 
 /**
  * メイン関数
@@ -22,14 +22,11 @@ fun main(args: Array<String>) {
         val importer = FileImporter(args)
         val entryPlayers: List<EntryPlayer> = importer.fileToEntryPlayer()
         val playLogs: List<PlayLog> = importer.fileToPlayLog()
-        if (entryPlayers.isNotEmpty() && playLogs.isNotEmpty()){
-            println("取り込み成功")
-        } else {
-            println("取り込み失敗")
+        if (entryPlayers.isEmpty()) {
+            println(ErrorCode.EMPTY_PLAYER_FILE.message)
+        } else if (playLogs.isEmpty()) {
+            println(ErrorCode.EMPTY_PLAY_LOG_FILE.message)
         }
-        return
-    } catch (e: IOException) {
-        println(e.message)
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
