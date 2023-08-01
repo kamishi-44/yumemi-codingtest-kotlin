@@ -5,6 +5,6 @@ package model
  */
 class RankerList(
     /** ランカーのリスト*/
-    val rankers: List<Ranker>) {
-
+    val rankers: List<Ranker>
+) {
 }

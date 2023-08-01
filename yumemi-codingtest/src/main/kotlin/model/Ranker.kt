@@ -12,4 +12,5 @@ data class Ranker(
     /** ハンドルネーム */
     val handleName: String,
     /** スコア */
-    val score: Int)
+    val score: Int
+)
