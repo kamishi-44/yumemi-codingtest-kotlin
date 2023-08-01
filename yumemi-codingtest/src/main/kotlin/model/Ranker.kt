@@ -13,4 +13,13 @@ data class Ranker(
     val handleName: String,
     /** スコア */
     val score: Int
-)
+) {
+    /**
+     * Ranker の String を返します。
+     *
+     * @return 各フィールドをカンマ区切りにした文字列
+     */
+    override fun toString(): String {
+        return "$rank,$playerId,$handleName,$score"
+    }
+}
