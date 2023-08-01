@@ -1,8 +1,10 @@
 package model
 
-class RankerList(rankers: List<Ranker>) {
-    private val rankers: List<Ranker>
-    init {
-        this.rankers = rankers
-    }
+/**
+ * 上位10名のプレイヤーを保持するクラスです。
+ */
+class RankerList(
+    /** ランカーのリスト*/
+    val rankers: List<Ranker>) {
+
 }
