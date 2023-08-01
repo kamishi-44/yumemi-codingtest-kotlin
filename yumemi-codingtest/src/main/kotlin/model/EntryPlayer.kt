@@ -3,4 +3,8 @@ package model
 /**
  * エントリーファイルのデータクラスです。
  */
-data class EntryPlayer (val playerId: String, val handleName: String)
+data class EntryPlayer (
+    /** プレイヤーID */
+    val playerId: String,
+    /** ハンドルネーム */
+    val handleName: String)

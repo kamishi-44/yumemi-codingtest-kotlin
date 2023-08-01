@@ -22,11 +22,6 @@ fun main(args: Array<String>) {
         val importer = FileImporter(args)
         val entryPlayers: List<EntryPlayer> = importer.fileToEntryPlayer()
         val playLogs: List<PlayLog> = importer.fileToPlayLog()
-        if (entryPlayers.isEmpty()) {
-            println(ErrorCode.EMPTY_PLAYER_FILE.message)
-        } else if (playLogs.isEmpty()) {
-            println(ErrorCode.EMPTY_PLAY_LOG_FILE.message)
-        }
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
