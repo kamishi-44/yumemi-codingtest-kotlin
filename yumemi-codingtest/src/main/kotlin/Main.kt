@@ -1,6 +1,7 @@
 import constant.ErrorCode
 import model.EntryPlayer
 import model.PlayLog
+import model.RankerList
 
 /**
  * メイン関数
@@ -22,6 +23,8 @@ fun main(args: Array<String>) {
         val importer = FileImporter(args)
         val entryPlayers: List<EntryPlayer> = importer.fileToEntryPlayer()
         val playLogs: List<PlayLog> = importer.fileToPlayLog()
+        val aggregator = ScoreAggregator(entryPlayers, playLogs)
+        aggregator.aggregate().outputRanker()
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
