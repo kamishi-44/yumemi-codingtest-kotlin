@@ -12,4 +12,13 @@ data class PlayLog(
     val playerId: String,
     /** スコア */
     val score: Int
-)
+) : Comparable<PlayLog> {
+
+    override fun compareTo(other: PlayLog): Int {
+        return if (score == other.score) {
+            0
+        } else {
+            score - other.score
+        }
+    }
+}

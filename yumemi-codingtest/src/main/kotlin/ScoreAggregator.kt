@@ -7,9 +7,9 @@ import model.RankerList
  */
 class ScoreAggregator(
     /** エントリープレイヤー一覧 */
-    val entryPlayers: List<EntryPlayer>,
+    private val entryPlayers: List<EntryPlayer>,
     /** プレイログ一覧 */
-    val playLogs: List<PlayLog>
+    private val playLogs: List<PlayLog>
 ) {
 
     /**
@@ -18,22 +18,22 @@ class ScoreAggregator(
      * @return 上位10名のプレイヤー一覧
      */
     fun aggregate(): RankerList {
-        return RankerList(listOf())
-    }
+        // プレイログを元に順位付けする
+        val sortedPlayLogs: List<PlayLog> = playLogs.sortedDescending()
 
-    /**
-     * スコアを元に降順でソートします。
-     */
-    private fun sortByScore() {
-
+        return extractTop10()
     }
 
     /**
      * 上位１０名のプレイヤーを抽出します。
      *
+     * @param[sortedPlayLogs] スコア降順でソートしたプレイログ
      * @return 上位10名のプレイヤー一覧
      */
-    private fun extractTop10(): RankerList {
+    private fun extractTop10(sortedPlayLogs: List<PlayLog>): RankerList {
+        // エントリープレイヤーはハンドルネーム取得用
+        // IDからハンドルネームを特定する
+        // エントリープレイヤーに存在しないIDの場合はスキップする
         return RankerList(listOf())
     }
 }
