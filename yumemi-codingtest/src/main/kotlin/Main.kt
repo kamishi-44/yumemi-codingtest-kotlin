@@ -1,6 +1,4 @@
 import constant.ErrorCode
-import model.EntryPlayer
-import model.PlayLog
 import model.Player
 import model.RankerList
 
