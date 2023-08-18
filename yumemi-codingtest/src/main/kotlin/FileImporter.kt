@@ -1,6 +1,7 @@
 import constant.ErrorCode
 import model.EntryPlayer
 import model.PlayLog
+import model.Player
 import java.io.File
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -36,12 +37,39 @@ class FileImporter(
     }
 
     /**
-     * エントリーファイルのCSVファイルを EntryPlayer の List に変換します。
+     * 以下のファイルを読み込み、プレイヤーのリストを返します。
+     * - エントリーファイル
+     * - プレイログ
      *
-     * @return エントリープレイヤーのリスト
+     * @return プレイヤーのリスト
+     */
+    fun import(): List<Player> {
+        // 2ファイルの読み込み
+        val idAndNameMap: Map<String, String> = fileToIdAndNameMap()
+        val playLogLines: MutableList<String> = importPlayLog()
+
+        val players: MutableList<Player> = mutableListOf()
+        // プレイログを1行ずつ読み込みプレイヤー情報を作成
+        for (line: String in playLogLines) {
+            val splitLine: List<String> = line.split(",")
+            val playerId: String = splitLine[1]
+            players.add(Player(
+                playerId = playerId,
+                handleName = idAndNameMap[playerId] ?: "",
+                score = splitLine[2].toInt(),
+                createTime = stringToLocalDateTime(splitLine[0])
+            ))
+        }
+
+        return players.toList()
+    }
+    /**
+     * エントリーファイルのCSVファイルを Map に変換します。
+     *
+     * @return エントリープレイヤーのマップ(エントリーID : ハンドルネーム)
      * @throws[IllegalArgumentException] 読み込んだファイルのヘッダーが不正の場合
      */
-    fun fileToEntryPlayer(): List<EntryPlayer> {
+    private fun fileToIdAndNameMap(): MutableMap<String, String> {
         val lines: MutableList<String> = readFile(entryPlayerPath)
         // 後続処理ではデータ部だけにしておきたいのでremoveする
         val headers: List<String> = lines.removeAt(0).split(",")
@@ -49,14 +77,14 @@ class FileImporter(
             throw IllegalArgumentException(ErrorCode.INVALID_HEADER.message)
         }
         // ファイルからデータクラスに変換
-        val entryPlayers: MutableList<EntryPlayer> = mutableListOf()
+        val entryPlayerMap: MutableMap<String, String> = mutableMapOf()
         for (line: String in lines) {
             val splitLine: List<String> = line.split(",")
             val entryPlayer = EntryPlayer(playerId = splitLine[0], handleName = splitLine[1])
-            entryPlayers.add(entryPlayer)
+            entryPlayerMap[splitLine[0]] = splitLine[1]
         }
 
-        return entryPlayers.toList()
+        return entryPlayerMap
     }
 
     /**
@@ -65,25 +93,15 @@ class FileImporter(
      * @return プレイログのリスト
      * @throws[IllegalArgumentException] 読み込んだファイルのヘッダーが不正の場合
      */
-    fun fileToPlayLog(): List<PlayLog> {
+    private fun importPlayLog(): MutableList<String> {
         val lines: MutableList<String> = readFile(playLogPath)
         // 後続処理ではデータ部だけにしておきたいのでremoveする
         val headers: List<String> = lines.removeAt(0).split(",")
         if (!validHeader(headers, PLAY_LOG_FIELDS)) {
             throw IllegalArgumentException(ErrorCode.INVALID_HEADER.message)
         }
-        // ファイルからデータクラスに変換
-        val playLogs: MutableList<PlayLog> = mutableListOf()
-        for (line: String in lines) {
-            val splitLine: List<String> = line.split(",")
-            val playLog = PlayLog(
-                createTime = stringToLocalDateTime(splitLine[0]),
-                playerId = splitLine[1],
-                score = splitLine[2].toInt()
-            )
-            playLogs.add(playLog)
-        }
-        return playLogs.toList()
+
+        return lines
     }
 
     /**
