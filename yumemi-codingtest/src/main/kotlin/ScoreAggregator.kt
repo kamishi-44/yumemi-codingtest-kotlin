@@ -57,7 +57,6 @@ class ScoreAggregator(
             }
             rankerList.add(Ranker(rank, player.playerId, player.handleName, player.score))
             lastScore = score
-            // TODO: 10人超えても次のプレイヤーのスコアが同点だった場合の考慮が不足
         }
         return RankerList(rankerList)
     }
