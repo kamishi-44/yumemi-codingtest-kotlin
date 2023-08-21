@@ -10,7 +10,7 @@ class ScoreAggregator(
 
     companion object {
         /** 上位ランカーの上限数 */
-        private const val MAX_RANKERS: Int = 10
+        private const val MAX_RANKERS: Int = 9
     }
 
     /**
@@ -46,19 +46,17 @@ class ScoreAggregator(
             }
 
             val score: Int = player.score
+            // ランカーが10人を超えた時点で終了
+            // スコアが前回と同じであれば10人を超えても結果に含める
+            if (lastScore != score && rankerList.size > MAX_RANKERS) {
+                break
+            }
             // 前回と違うスコアであれば順位更新
             if (score != lastScore) {
                 rank = determineNextRank(rank, rankerList.size)
             }
             rankerList.add(Ranker(rank, player.playerId, player.handleName, player.score))
             lastScore = score
-            // ランカーが10人を超えた時点で終了
-            if (rankerList.size > MAX_RANKERS) {
-                break
-            }
-            // TODO: 10人超えても次のプレイヤーのスコアが同点だった場合の考慮が不足
-            // TODO: ハンドルネームの取得
-
         }
         return RankerList(rankerList)
     }

@@ -1,6 +1,4 @@
 import constant.ErrorCode
-import model.EntryPlayer
-import model.PlayLog
 import model.Player
 import java.io.File
 import java.time.LocalDateTime
@@ -80,7 +78,6 @@ class FileImporter(
         val entryPlayerMap: MutableMap<String, String> = mutableMapOf()
         for (line: String in lines) {
             val splitLine: List<String> = line.split(",")
-            val entryPlayer = EntryPlayer(playerId = splitLine[0], handleName = splitLine[1])
             entryPlayerMap[splitLine[0]] = splitLine[1]
         }
 
