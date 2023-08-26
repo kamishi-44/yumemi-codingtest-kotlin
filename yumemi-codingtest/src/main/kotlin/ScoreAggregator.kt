@@ -32,9 +32,6 @@ class ScoreAggregator(
      * @return 上位10名のプレイヤー一覧
      */
     private fun extractTop10(sortedPlayers: List<Player>): RankerList {
-        // エントリープレイヤーはハンドルネーム取得用
-        // IDからハンドルネームを特定する
-        // エントリープレイヤーに存在しないIDの場合はスキップする
         val rankerList: MutableList<Ranker> = mutableListOf()
         val rankedPlayerList: MutableList<String> = mutableListOf()
         var rank = 1

@@ -51,16 +51,19 @@ class FileImporter(
         for (line: String in playLogLines) {
             val splitLine: List<String> = line.split(",")
             val playerId: String = splitLine[1]
-            players.add(Player(
-                playerId = playerId,
-                handleName = idAndNameMap[playerId] ?: "",
-                score = splitLine[2].toInt(),
-                createTime = stringToLocalDateTime(splitLine[0])
-            ))
+            players.add(
+                Player(
+                    playerId = playerId,
+                    handleName = idAndNameMap[playerId] ?: "",
+                    score = splitLine[2].toInt(),
+                    createTime = stringToLocalDateTime(splitLine[0])
+                )
+            )
         }
 
         return players.toList()
     }
+
     /**
      * エントリーファイルのCSVファイルを Map に変換します。
      *
