@@ -10,6 +10,7 @@ class RankerList(
     companion object {
         /** 結果出力のフィールド */
         private val resultFields: List<String> = listOf("rank", "player_id", "handle_name", "score")
+        private const val LF: String = "\n"
     }
 
     /**
@@ -20,7 +21,8 @@ class RankerList(
         // フィールドの出力
         println(resultFields.joinToString(separator = ","))
         for (ranker: Ranker in rankers) {
-            println(ranker.toString())
+            print(ranker.toString())
+            print(LF)
         }
     }
 }

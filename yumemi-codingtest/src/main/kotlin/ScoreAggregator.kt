@@ -36,12 +36,18 @@ class ScoreAggregator(
         // IDからハンドルネームを特定する
         // エントリープレイヤーに存在しないIDの場合はスキップする
         val rankerList: MutableList<Ranker> = mutableListOf()
+        val rankedPlayerList: MutableList<String> = mutableListOf()
         var rank = 1
         var lastScore = 0
 
         for (player: Player in sortedPlayers) {
             // 存在しないプレイヤーはスキップ
             if (player.handleName.isEmpty()) {
+                continue
+            }
+            // リストに追加済みの場合はスキップ
+            val playerId: String = player.playerId
+            if (rankedPlayerList.contains(playerId)) {
                 continue
             }
 
@@ -55,7 +61,8 @@ class ScoreAggregator(
             if (score != lastScore) {
                 rank = determineNextRank(rank, rankerList.size)
             }
-            rankerList.add(Ranker(rank, player.playerId, player.handleName, player.score))
+            rankerList.add(Ranker(rank, playerId, player.handleName, player.score))
+            rankedPlayerList.add(playerId)
             lastScore = score
         }
         return RankerList(rankerList)
