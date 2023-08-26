@@ -1,6 +1,8 @@
 import constant.ErrorCode
+import constant.ProcessStatus
 import model.Player
 import model.RankerList
+import kotlin.system.exitProcess
 
 /**
  * メイン関数
@@ -15,7 +17,7 @@ fun main(args: Array<String>) {
     if (!checker.validArgs()) {
         // エラー処理
         println(checker.errorMessage())
-        return
+        exitProcess(ProcessStatus.INVALID_ARGS.status)
     }
     // ファイルの変換、内容チェック
     try {
@@ -25,6 +27,7 @@ fun main(args: Array<String>) {
         aggregator.aggregate().outputRanker()
     } catch (e: IllegalArgumentException) {
         println(e.message)
+        exitProcess(ProcessStatus.INVALID_IMPORT.status)
     }
 }
 
