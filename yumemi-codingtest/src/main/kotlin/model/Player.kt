@@ -16,10 +16,10 @@ data class Player(
     val createTime: LocalDateTime
 ) : Comparable<Player> {
     override fun compareTo(other: Player): Int {
-        return if (score == other.score) {
-            0
-        } else {
+        return if (score != other.score) {
             score - other.score
+        } else {
+            playerId.compareTo(other.playerId)
         }
     }
 }
