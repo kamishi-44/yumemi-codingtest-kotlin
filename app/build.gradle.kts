@@ -41,7 +41,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass.set("yumemi.codingtest.kotlin.AppKt")
+    mainClass.set("yumemi.codingtest.kotlin.Main")
 }
 
 tasks.named<Test>("test") {
