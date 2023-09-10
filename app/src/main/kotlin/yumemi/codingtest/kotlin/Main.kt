@@ -31,4 +31,3 @@ fun main(args: Array<String>) {
         exitProcess(ProcessStatus.INVALID_IMPORT.status)
     }
 }
-
