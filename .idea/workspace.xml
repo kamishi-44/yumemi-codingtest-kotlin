@@ -8,12 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd8560ea-df09-4f1f-aa14-93f6252b7c43" name="変更" comment="# ==== Commit Messages ====&#10;&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/yumemi_codingtest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ArgsCheckerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/ArgsChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/ArgsChecker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ArgsCheckerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ArgsCheckerTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +49,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/dev/yumemi-codingtest-kotlin/app/src/test/kotlin/yumemi/codingtest/kotlin",
+    "last_opened_file_path": "D:/dev/yumemi-codingtest-kotlin___",
     "project.structure.last.edited": "モジュール",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -69,7 +65,7 @@
       <recent name="D:\dev\yumemi-codingtest-kotlin\app\src\main\kotlin\yumemi\codingtest\kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.yumemi-codingtest">
+  <component name="RunManager" selected="Kotest.ArgsCheckerTest: 引数の数が2,パスがファイルを指している場合 true が返る">
     <configuration name="yumemi-codingtest" type="JetRunConfigurationType">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jdk-19.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -96,10 +92,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ArgsCheckerTest: 引数の数が2,パスがファイルを指している場合 true が返る" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
+      <module name="yumemi-codingtest-kotlin.app.test" />
+      <option name="jrePath" value="" />
+      <option name="jrePathEnabled" value="false" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
+      <option name="programParameters" value="" />
+      <option name="specName" value="yumemi.codingtest.kotlin.ArgsCheckerTest" />
+      <option name="testPath" value="validArgs() test -- OK -- 引数の数が2,パスがファイルを指している場合 true が返る" />
+      <option name="packageName" value="" />
+      <option name="vmparams" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Kotest.ArgsCheckerTest" />
+      <item itemvalue="Kotest.ArgsCheckerTest: 引数の数が2,パスがファイルを指している場合 true が返る" />
       <item itemvalue="Kotlin.yumemi-codingtest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotest.ArgsCheckerTest: 引数の数が2,パスがファイルを指している場合 true が返る" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -110,6 +127,14 @@
       <option name="presentableId" value="Default" />
       <updated>1694006497207</updated>
     </task>
+    <task id="LOCAL-00001" summary="# ==== Commit Messages ====&#10;:bug: #21 実行構成を変更する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
+      <created>1694312169909</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694312169909</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,12 +148,16 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# ==== Commit Messages ====&#10;:bug: #21 実行構成を変更する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;#   :tada: 初めてのコミット（Initial Commit）&#10;#   :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;#   :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;#   :books: ドキュメント（Documentation）&#10;#   :art: デザインUI/UX(Accessibility)&#10;#   :horse: パフォーマンス（Performance）&#10;#   :wrench: ツール（Tooling）&#10;#   :rotating_light: テスト（Tests）&#10;#   :hankey: 非推奨追加（Deprecation）&#10;# ️  :wastebasket: 削除（Removal）&#10;#   :construction: WIP(Work In Progress)" />
+    <option name="LAST_COMMIT_MESSAGE" value="# ==== Commit Messages ====&#10;:bug: #21 実行構成を変更する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;#   :tada: 初めてのコミット（Initial Commit）&#10;#   :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;#   :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;#   :books: ドキュメント（Documentation）&#10;#   :art: デザインUI/UX(Accessibility)&#10;#   :horse: パフォーマンス（Performance）&#10;#   :wrench: ツール（Tooling）&#10;#   :rotating_light: テスト（Tests）&#10;#   :hankey: 非推奨追加（Deprecation）&#10;# ️  :wastebasket: 削除（Removal）&#10;#   :construction: WIP(Work In Progress)" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/ArgsChecker.kt</url>
-          <line>37</line>
+          <line>39</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

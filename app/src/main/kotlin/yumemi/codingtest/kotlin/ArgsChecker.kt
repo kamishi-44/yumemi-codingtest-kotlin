@@ -2,6 +2,7 @@ package yumemi.codingtest.kotlin
 
 import yumemi.codingtest.kotlin.constant.ErrorCode
 import java.io.File
+import java.nio.file.Paths
 
 /**
  * コマンドライン引数のチェッカークラスです。
@@ -35,6 +36,7 @@ class ArgsChecker(
             return false
         }
         // ファイルの存在チェック
+        val current = Paths.get("").toAbsolutePath()
         for (filePath: String in commandLineArgs) {
             val file = File(filePath)
             if (!file.exists() || file.isDirectory) {
