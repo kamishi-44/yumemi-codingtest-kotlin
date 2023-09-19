@@ -8,11 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd8560ea-df09-4f1f-aa14-93f6252b7c43" name="変更" comment="# ==== Commit Messages ====&#10;&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
-      <change afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/FileImporterTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parameter/game_entry_log_invalid_header.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parameter/game_score_log_invalid_header.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ScoreAggregatorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ArgsCheckerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ArgsCheckerTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
