@@ -2,13 +2,12 @@ package yumemi.codingtest.kotlin
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNotBe
 import yumemi.codingtest.kotlin.constant.ErrorCode
 
+/**
+ * ArgsChecker のテストクラスです。
+ */
 class ArgsCheckerTest : FunSpec() {
-    private val args: Array<String> = arrayOf("./parameter/game_entry_log.csv")
-    private val checker: ArgsChecker = ArgsChecker(args)
-
     init {
         context("validArgs() test") {
             context("OK") {
