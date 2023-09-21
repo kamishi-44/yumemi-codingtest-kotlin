@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
         val importer = FileImporter(args)
         val players: List<Player> = importer.import()
         val aggregator = ScoreAggregator(players)
-        aggregator.aggregate().outputRanker()
+        print(aggregator.aggregate().createResult())
     } catch (e: IllegalArgumentException) {
         println(e.message)
         exitProcess(ProcessStatus.INVALID_IMPORT.status)

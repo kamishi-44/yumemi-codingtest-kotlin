@@ -16,15 +16,17 @@ class RankerList(
     }
 
     /**
-     * 上位プレイヤーの情報を出力します。
-     * 各項目はカンマ区切りのCSV形式で出力します。
+     * コンソールに出力する集計結果を作成します。
+     * 各項目はカンマ区切りのCSV形式でです。
+     *
+     * @return コンソールに出力する集計結果
      */
-    fun outputRanker() {
-        // フィールドの出力
-        println(resultFields.joinToString(separator = ","))
+    fun createResult(): String {
+        val result: StringBuilder = StringBuilder()
+        result.append(resultFields.joinToString(separator = ",") + LF)
         for (ranker: Ranker in rankers) {
-            print(ranker.toString())
-            print(LF)
+            result.append(ranker.toString() + LF)
         }
+        return result.toString()
     }
 }
