@@ -8,11 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd8560ea-df09-4f1f-aa14-93f6252b7c43" name="変更" comment="# ==== Commit Messages ====&#10;&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
-      <change afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/FileImporterTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parameter/game_entry_log_invalid_header.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parameter/game_score_log_invalid_header.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameter/test-no-tie/game_entry_log_no_tie.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameter/test-no-tie/game_score_log_no_tie.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ArgsCheckerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ArgsCheckerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/model/RankerList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/yumemi/codingtest/kotlin/model/RankerList.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,34 +54,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/dev/yumemi-codingtest-kotlin/parameter",
-    "project.structure.last.edited": "モジュール",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/dev/yumemi-codingtest-kotlin/parameter/test-no-tie&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\yumemi-codingtest-kotlin\parameter\test-no-tie" />
       <recent name="D:\dev\yumemi-codingtest-kotlin\parameter" />
       <recent name="D:\dev\yumemi-codingtest-kotlin\app\src\test\kotlin\yumemi\codingtest\kotlin" />
       <recent name="D:\dev\yumemi-codingtest-kotlin" />
       <recent name="D:\dev\yumemi-codingtest-kotlin\app\src\main\kotlin\yumemi\codingtest\kotlin" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dev\yumemi-codingtest-kotlin\parameter\test-no-tie" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotest.FileImporterTest: import() test">
+  <component name="RunManager" selected="Kotlin.yumemi-codingtest">
     <configuration name="yumemi-codingtest" type="JetRunConfigurationType">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jdk-19.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="yumemi.codingtest.kotlin.MainKt" />
       <module name="yumemi-codingtest-kotlin.app.main" />
-      <option name="PROGRAM_PARAMETERS" value="./parameter/game_entry_log.csv ./parameter/game_score_log.csv" />
+      <option name="PROGRAM_PARAMETERS" value="./parameter/test-no-tie/game_entry_log_no_tie.csv ./parameter/test-no-tie/game_score_log_no_tie.csv" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
