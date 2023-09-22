@@ -7,7 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8560ea-df09-4f1f-aa14-93f6252b7c43" name="変更" comment="# ==== Commit Messages ====&#10;&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
+    <list default="true" id="fd8560ea-df09-4f1f-aa14-93f6252b7c43" name="変更" comment="# ==== Commit Messages ====&#10;:bug: #10 スコアが同点の場合player_idの降順になる不具合を修正する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
+      <change afterPath="$PROJECT_DIR$/parameter/test-over-10/game_entry_log_over_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameter/test-over-10/game_score_log_over_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameter/test-tie/game_entry_log_tie.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameter/test-tie/game_score_log_tie.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ScoreAggregatorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ScoreAggregatorTest.kt" afterDir="false" />
     </list>
@@ -51,32 +55,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/dev/yumemi-codingtest-kotlin/parameter/test-no-tie&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/dev/yumemi-codingtest-kotlin/parameter/test-over-10",
+    "project.structure.last.edited": "モジュール",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\yumemi-codingtest-kotlin\parameter\test-over-10" />
+      <recent name="D:\dev\yumemi-codingtest-kotlin\parameter\test-tie" />
       <recent name="D:\dev\yumemi-codingtest-kotlin\parameter\test-no-tie" />
       <recent name="D:\dev\yumemi-codingtest-kotlin\parameter" />
       <recent name="D:\dev\yumemi-codingtest-kotlin\app\src\test\kotlin\yumemi\codingtest\kotlin" />
-      <recent name="D:\dev\yumemi-codingtest-kotlin" />
-      <recent name="D:\dev\yumemi-codingtest-kotlin\app\src\main\kotlin\yumemi\codingtest\kotlin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\dev\yumemi-codingtest-kotlin\parameter\test-no-tie" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotest.ScoreAggregatorTest: 同点スコアが無い場合、順位は1~10の順となる。">
+  <component name="RunManager" selected="Kotest.ScoreAggregatorTest">
     <configuration name="yumemi-codingtest" type="JetRunConfigurationType">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../Program Files/Java/jdk-19.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -133,6 +137,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreAggregatorTest" type="ioKotest" factoryName="Kotest" defaultName="singleModule">
+      <module name="yumemi-codingtest-kotlin.app.test" />
+      <option name="jrePath" value="" />
+      <option name="jrePathEnabled" value="false" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
+      <option name="programParameters" value="" />
+      <option name="specName" value="yumemi.codingtest.kotlin.ScoreAggregatorTest" />
+      <option name="testPath" value="" />
+      <option name="packageName" value="" />
+      <option name="vmparams" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ScoreAggregatorTest: 同点スコアが無い場合、順位は1~10の順となる。" type="ioKotest" factoryName="Kotest" defaultName="singleModule">
       <module name="yumemi-codingtest-kotlin.app.test" />
       <option name="jrePath" value="" />
@@ -148,7 +167,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreAggregatorTest: 同点スコアがある場合、順位が同じ行が複数できる。" type="ioKotest" factoryName="Kotest" defaultName="singleModule">
+      <module name="yumemi-codingtest-kotlin.app.test" />
+      <option name="jrePath" value="" />
+      <option name="jrePathEnabled" value="false" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
+      <option name="programParameters" value="" />
+      <option name="specName" value="yumemi.codingtest.kotlin.ScoreAggregatorTest" />
+      <option name="testPath" value="OK -- 同点スコアがある場合、順位が同じ行が複数できる。" />
+      <option name="packageName" value="" />
+      <option name="vmparams" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Kotest.ScoreAggregatorTest" />
+      <item itemvalue="Kotest.ScoreAggregatorTest: 同点スコアがある場合、順位が同じ行が複数できる。" />
       <item itemvalue="Kotest.ScoreAggregatorTest: 同点スコアが無い場合、順位は1~10の順となる。" />
       <item itemvalue="Kotest.ArgsCheckerTest" />
       <item itemvalue="Kotest.FileImporterTest: import() test" />
@@ -178,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694312169909</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="# ==== Commit Messages ====&#10;:bug: #10 スコアが同点の場合player_idの降順になる不具合を修正する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
+      <created>1695396543919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695396543919</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,7 +237,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="# ==== Commit Messages ====&#10;:bug: #21 実行構成を変更する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;#   :tada: 初めてのコミット（Initial Commit）&#10;#   :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;#   :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;#   :books: ドキュメント（Documentation）&#10;#   :art: デザインUI/UX(Accessibility)&#10;#   :horse: パフォーマンス（Performance）&#10;#   :wrench: ツール（Tooling）&#10;#   :rotating_light: テスト（Tests）&#10;#   :hankey: 非推奨追加（Deprecation）&#10;# ️  :wastebasket: 削除（Removal）&#10;#   :construction: WIP(Work In Progress)" />
-    <option name="LAST_COMMIT_MESSAGE" value="# ==== Commit Messages ====&#10;:bug: #21 実行構成を変更する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;#   :tada: 初めてのコミット（Initial Commit）&#10;#   :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;#   :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;#   :books: ドキュメント（Documentation）&#10;#   :art: デザインUI/UX(Accessibility)&#10;#   :horse: パフォーマンス（Performance）&#10;#   :wrench: ツール（Tooling）&#10;#   :rotating_light: テスト（Tests）&#10;#   :hankey: 非推奨追加（Deprecation）&#10;# ️  :wastebasket: 削除（Removal）&#10;#   :construction: WIP(Work In Progress)" />
+    <MESSAGE value="# ==== Commit Messages ====&#10;:bug: #10 スコアが同点の場合player_idの降順になる不具合を修正する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;#   :tada: 初めてのコミット（Initial Commit）&#10;#   :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;#   :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;#   :books: ドキュメント（Documentation）&#10;#   :art: デザインUI/UX(Accessibility)&#10;#   :horse: パフォーマンス（Performance）&#10;#   :wrench: ツール（Tooling）&#10;#   :rotating_light: テスト（Tests）&#10;#   :hankey: 非推奨追加（Deprecation）&#10;# ️  :wastebasket: 削除（Removal）&#10;#   :construction: WIP(Work In Progress)" />
+    <option name="LAST_COMMIT_MESSAGE" value="# ==== Commit Messages ====&#10;:bug: #10 スコアが同点の場合player_idの降順になる不具合を修正する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;#   :tada: 初めてのコミット（Initial Commit）&#10;#   :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;#   :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;#   :books: ドキュメント（Documentation）&#10;#   :art: デザインUI/UX(Accessibility)&#10;#   :horse: パフォーマンス（Performance）&#10;#   :wrench: ツール（Tooling）&#10;#   :rotating_light: テスト（Tests）&#10;#   :hankey: 非推奨追加（Deprecation）&#10;# ️  :wastebasket: 削除（Removal）&#10;#   :construction: WIP(Work In Progress)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
