@@ -19,7 +19,7 @@ data class Player(
         return if (score != other.score) {
             score - other.score
         } else {
-            playerId.compareTo(other.playerId)
+            other.playerId.compareTo(playerId)
         }
     }
 }
