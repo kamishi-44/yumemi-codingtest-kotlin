@@ -1,0 +1,13 @@
+name: kotest-github-actions
+run-name: ${{ github.actor }} is Kotest GitHub Actions
+on: [push]
+jobs:
+  check-kotest-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
