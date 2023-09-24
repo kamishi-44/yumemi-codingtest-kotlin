@@ -7,13 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd8560ea-df09-4f1f-aa14-93f6252b7c43" name="変更" comment="# ==== Commit Messages ====&#10;:bug: #10 スコアが同点の場合player_idの降順になる不具合を修正する&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
-      <change afterPath="$PROJECT_DIR$/parameter/test-over-10/game_entry_log_over_10.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parameter/test-over-10/game_score_log_over_10.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parameter/test-tie/game_entry_log_tie.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parameter/test-tie/game_score_log_tie.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ScoreAggregatorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/kotlin/yumemi/codingtest/kotlin/ScoreAggregatorTest.kt" afterDir="false" />
+    <list default="true" id="fd8560ea-df09-4f1f-aa14-93f6252b7c43" name="変更" comment="# ==== Commit Messages ====&#10;&#10;# ==================== Format ====================&#10;# :emoji: #XX Subject&#10;#&#10;# Commit body...&#10;# ==================== Emojis ====================&#10;# 🎉  :tada: 初めてのコミット（Initial Commit）&#10;# 🔖  :bookmark: バージョンタグ（Version Tag）&#10;# ✨  :sparkles: 新機能（New Feature）&#10;# 🐛  :bug: バグ修正（Bagfix）&#10;# ♻️  :recycle: リファクタリング(Refactoring)&#10;# 📚  :books: ドキュメント（Documentation）&#10;# 🎨  :art: デザインUI/UX(Accessibility)&#10;# 🐎  :horse: パフォーマンス（Performance）&#10;# 🔧  :wrench: ツール（Tooling）&#10;# 🚨  :rotating_light: テスト（Tests）&#10;# 💩  :hankey: 非推奨追加（Deprecation）&#10;# 🗑️  :wastebasket: 削除（Removal）&#10;# 🚧  :construction: WIP(Work In Progress)">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/kotest-github-actions.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/kotest-github-actions.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +54,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/dev/yumemi-codingtest-kotlin/parameter/test-over-10",
     "project.structure.last.edited": "モジュール",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+    "settings.editor.selected.configurable": "Csv.Editor.Settings"
   }
 }]]></component>
   <component name="RecentsManager">
