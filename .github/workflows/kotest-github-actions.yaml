@@ -23,6 +23,10 @@ jobs:
       - name: JDK version check
         run: java -version
 
+      # Gradle 実行の権限付与
+      - name: Grant gradle permission
+        run: chmod +x ./gradlew
+
       # テストの実行
       - name: Execute test
         run: ./gradlew test
