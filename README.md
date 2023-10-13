@@ -16,5 +16,5 @@ https://qiita.com/taruhachi/items/56085228fe17537cc0d8
 
 ## テスト
 ユニットテストは Kotest を使用しており、基本的には条件網羅しています。  
-private の関数については public の関数経由でテストを実施しています。
+private 関数については public 関数経由でテストを実施しており、private 関数の品質を担保してています。
 また、GitHub Actions を導入し、リポジトリへの push が発生した際に自動テストが実行するようにしています。
